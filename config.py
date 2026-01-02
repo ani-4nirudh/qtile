@@ -250,7 +250,7 @@ screens = [
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
                 widget.Systray(),
-                widget.Clock(format="%d-%m-%Y %a %I:%M %p",
+                widget.Clock(format="%d-%m-%Y %a %I:%M:%S %p",
                              font=JBMono,
                              fontsize=fntsize,
                              foreground=colors["green_light"],
@@ -325,7 +325,7 @@ screens = [
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
                 # widget.Systray(),
-                widget.Clock(format="%d-%m-%Y %a %I:%M %p",
+                widget.Clock(format="%d-%m-%Y %a %I:%M:%S %p",
                              font=JBMono,
                              fontsize=fntsize,
                              foreground=colors["green_light"],

@@ -1,0 +1,1 @@
+ACTION=="change", SUBSYSTEM=="drm", RUN+="/home/praani/.config/qtile/monitor-hotplug.sh"

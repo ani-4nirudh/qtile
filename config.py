@@ -56,6 +56,7 @@ from volume_config import create_volume_widget
 from battery_widget import create_battery_widget
 from bluetooth_config import create_blt_widget
 from layout_theme import init_layout_theme  
+import vpn_widget 
 
 '''
 Constants
@@ -245,6 +246,7 @@ screens = [
                 create_keyboard_widget(JBMono, fntsize, colors["fg"], colors["bg"]), 
                 create_volume_widget(JBMono, fntsize, colors["fg"], colors["bg"]), 
                 create_battery_widget(JBMono, fntsize, colors["fg"], colors["bg"]), 
+                vpn_widget.VPNStatus(),
                 # widget.TextBox("default config", name="default"),
                 # widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
@@ -320,6 +322,7 @@ screens = [
                 create_keyboard_widget(JBMono, fntsize, colors["fg"], colors["bg"]), 
                 create_volume_widget(JBMono, fntsize, colors["fg"], colors["bg"]), 
                 create_battery_widget(JBMono, fntsize, colors["fg"], colors["bg"]), 
+                vpn_widget.VPNStatus(),
                 # widget.TextBox("default config", name="default"),
                 # widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead

@@ -12,7 +12,7 @@ def create_volume_widget(font, fontsize, foreground=None, background=None):
             mouse_callbacks={'Button1':lazy.spawn("pamixer --toggle-mute")},
             update_interval=0.2,
             emoji=True,
-            emoji_list=["\ueee8","\uf026","\uf027","\uf028"],
+            emoji_list=["\ueee8 ","\uf026 ","\uf027 ","\uf028 "],
             # fmt="{emoji} {volume}%",
             unmute_format='{volume}%',
             padding=5,

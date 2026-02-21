@@ -56,6 +56,7 @@ from volume_config import create_volume_widget
 from battery_widget import create_battery_widget
 from bluetooth_config import create_blt_widget
 from layout_theme import init_layout_theme  
+from screenshot_widget import create_screenshot 
 import vpn_widget 
 
 '''
@@ -123,6 +124,9 @@ keys = [
     # Keyboard layout
     Key([mod], "F1", lazy.spawn("setxkbmap us"), desc="Keyboard Layout: US"),
     Key([mod], "F2", lazy.spawn("setxkbmap de"), desc="Keyboard Layout: DE"),
+
+    # Launch Pacman file explorer
+    Key([mod], "f", lazy.spawn("pcmanfm"), desc="Launch file manager"),
 ]
 
 # Add key bindings to switch VTs in Wayland.

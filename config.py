@@ -126,7 +126,7 @@ keys = [
     Key([mod], "F2", lazy.spawn("setxkbmap de"), desc="Keyboard Layout: DE"),
 
     # Launch Pacman file explorer
-    Key([mod], "f", lazy.spawn("pcmanfm"), desc="Launch file manager"),
+    Key([mod, "shift"], "f", lazy.spawn("pcmanfm"), desc="Launch file manager"),
 
     # Create screenshot
     Key([mod], "p", create_screenshot, desc="Select area for screenshot")

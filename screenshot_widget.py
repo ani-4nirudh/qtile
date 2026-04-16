@@ -3,7 +3,7 @@ from libqtile.lazy import lazy
 
 @lazy.function
 def create_screenshot(qtile):
-    pictures = "~/Pictures"
+    pictures = os.path.expanduser("~/Pictures")
     
     # Create a directory if it does not exist
     if not os.path.exists(pictures):

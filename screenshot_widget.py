@@ -1,10 +1,19 @@
-from libqtile import widget
+import os
 from libqtile.lazy import lazy
 
-def create_screenshot():
-    # Select area with mouse
-    keys.append(
-        Key([mod, "shift"], "s", 
-        lazy.spawn("scrot -s ${HOME}/Pictures/screenshot_%Y_%m_%d-%H%M%S.png"), 
-        desc="Screenshot selection"),
-    )
+@lazy.function
+def create_screenshot(qtile):
+    pictures = "/home/praani/Pictures"
+    
+    # Create a directory if it does not exist
+    if not os.path.exists(pictures):
+        os.makedirs(pictures)
+
+    # Save the screenshot with the timestamp
+    import datetime
+    timestamp = datetime.datetime.now().strftime("%Y_%m_%d-%H%M%S")
+    filename = f"screenshot_{timestamp}.png"
+    filepath = f"{pictures}/{filename}"
+
+    # Execute the screenshot command
+    qtile.spawn(f"scrot -s {filepath}")
